@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
 
 const AppLayout = props => {
     return (
@@ -9,9 +10,7 @@ const AppLayout = props => {
                 <title>{ props.title }</title>
             </Head>
 
-            <nav>
-                
-            </nav>
+            <Navbar />
 
             <main>
                 { props.children }
