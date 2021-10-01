@@ -9,7 +9,8 @@ const NavbarTop = () => {
     return (
         <Navbar className="navbar" bg="light" expand="lg">
             <Container>
-                <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand className={"wow fadeInUp"}>React-Bootstrap</Navbar.Brand>
+
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
