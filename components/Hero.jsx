@@ -1,14 +1,21 @@
 import Image from 'next/image'
-import featuredImage from '../public/assets/images/Bkg.png'
 
-const Hero = () => {
+const Hero = (props) => {
+
     return (
         <div className="hero">
             <Image
             className="hero-featured-image"
-            src={ featuredImage }
+            src={ 'https://image.tmdb.org/t/p/original' + props.urlImage }
             alt="hero-featured-image"
+            layout='fill'
             />
+
+            <div className="hero-overlay"></div>
+
+            <section className="hero-content">
+                <h1 className="hero-title">{ props.featuredFilm }</h1>
+            </section>
         </div>
     )
 }
