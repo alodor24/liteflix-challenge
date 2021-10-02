@@ -14,18 +14,18 @@ body {
   background-color: transparent !important;
 }
 
+@media(max-width: 767px) {
+  .navbar {
+    top: 24px;
+  }
+}
+
 
 /* Hero */
 .hero {
   position: relative;
-  height: 932px;
-  overflow: hidden;
   background-color: #242424;
-}
-
-.hero > div:first-child,
-.hero > div:first-child > div {
-  position: unset !important;
+  height: 932px;
 }
 
 .hero-featured-image {
@@ -36,10 +36,68 @@ body {
 
 .hero-overlay {
   position: absolute !important;
-  bottom: 0;
+  bottom: -1px;
   height: 193px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0%, #242424 100%);
+}
+
+.hero-container {
+  padding-top: 152px;
+}
+
+.hero-content {
+  position: relative;
+  margin-top: 250px;
+}
+
+.hero-content h1 {
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 100px;
+  letter-spacing: 16px;
+  text-transform: uppercase;
+  color: #64EEBC;
+  word-break: break-word;
+}
+
+.hero-content h6 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-container-buttons {
+  margin-top: 25px;
+}
+
+.hero-container-buttons .btn-primary,
+.hero-container-buttons .btn-secondary {
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  color: #fff;
+  width: 248px;
+  height: 56px;
+}
+
+.hero-container-buttons .btn-primary {
+  margin-right: 10px;
+  background-color: #242424;
+  border: none;
+}
+
+.hero-container-buttons .btn-secondary {
+  margin-left: 10px;
+  background: rgba(36, 36, 36, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 @keyframes hero-animation {
@@ -60,4 +118,43 @@ body {
   .hero-featured-image {
     object-position: 40% 0;
   }
+
+  .hero-content {
+    margin-top: 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 12px;
+  }
+
+  .hero-content h6 {
+    text-align: center;
+  }
+}
+
+@media(max-width: 991px) {
+  .hero-container-buttons .btn-primary,
+  .hero-container-buttons .btn-secondary {
+    margin: 0;
+    width: 100%;
+  }
+
+  .hero-container-buttons .btn-primary {
+    margin-bottom: 10px;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    margin-top: 150px;
+  }
+}
+
+
+/* List Films */
+.list-films {
+  position: relative;
 }

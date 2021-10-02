@@ -17,12 +17,6 @@ const Home = (props) => {
             featuredFilm={ featuredFilm[0].title } 
             urlImage={ featuredFilm[0].backdrop_path }
             />
-            {
-                popularFilms.map(item => {
-                    //console.log('--- Data Popular Films ---')
-                    //console.log(item)
-                })
-            }
         </AppLayout>
     )
 }
