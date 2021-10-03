@@ -23,22 +23,17 @@ const Hero = (props) => {
 
                             <div className="hero-container-buttons">
                                 <Button className="btn-primary wow slideInUp">
-                                    <Image
-                                    src="/assets/images/play.png"
-                                    alt="icon-play"
-                                    width={14}
-                                    height={14}
-                                    />{' '}
+                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M11.9423 8.2363L2.625 1.875V14.125L11.9423 8.2363Z" stroke="white"/>
+                                    </svg>{' '}
                                     Reproducir
                                 </Button>
 
                                 <Button className="btn-secondary wow slideInUp">
-                                    <Image
-                                    src="/assets/images/plus.png"
-                                    alt="icon-plus"
-                                    width={14}
-                                    height={14}
-                                    />{' '}
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.5 0V14" stroke="white"/>
+                                        <path d="M14.5 7L0.5 7" stroke="white"/>
+                                    </svg>{' '}
                                     Mi Lista
                                 </Button>
                             </div>
