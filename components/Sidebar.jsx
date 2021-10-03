@@ -4,13 +4,17 @@ import Image from 'next/image'
 import MyMovies from './MyMovies'
 
 const Sidebar = (props) => {
+    const [showPopularFilms, setShowPopularFilms] = useState(true)
+    const [showMyMovies, setShowMyMovies] = useState(false)
 
-    const showPopularFilms = () => {
-
+    const handleShowPopularFilms = () => {
+        setShowPopularFilms(true)
+        setShowMyMovies(false)
     }
 
-    const showMyMovies = () => {
-
+    const handleShowMyMovies = () => {
+        setShowPopularFilms(false)
+        setShowMyMovies(true)
     }
 
     return (
@@ -22,13 +26,13 @@ const Sidebar = (props) => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={ showPopularFilms }>POPULARES</Dropdown.Item>
-                        <Dropdown.Item onClick={ showMyMovies }>MIS PELÍCULAS</Dropdown.Item>
+                        <Dropdown.Item onClick={ handleShowPopularFilms }>POPULARES</Dropdown.Item>
+                        <Dropdown.Item onClick={ handleShowMyMovies }>MIS PELÍCULAS</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Row>
 
-            <div className="popular-movies">
+            <div className={ 'popular-movies ' + (showPopularFilms ? 'active' : '') }>
                 {
                     props.popularFilms.map(movie => (
                         <Row key={ movie.id } className="mb-4 wow zoomIn">
@@ -76,7 +80,7 @@ const Sidebar = (props) => {
                 }
             </div>
 
-            <div className="my-movies">
+            <div className={ 'my-movies ' + (showMyMovies ? 'active' : '') }>
                 <MyMovies />
             </div>
         </Container>

@@ -11,6 +11,17 @@ ul {
   list-style: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 /* Navbar */
 .navbar {
   position: absolute;
@@ -135,6 +146,17 @@ ul {
   color: #fff;
   width: 248px;
   height: 56px;
+  transition: all .3s ease-in-out;
+}
+
+.hero-container-buttons .btn-primary:hover,
+.hero-container-buttons .btn-secondary:hover {
+  transform: scale(.95);
+}
+
+.hero-container-buttons .btn-primary:focus,
+.hero-container-buttons .btn-secondary:focus {
+  box-shadow: none;
 }
 
 .hero-container-buttons .btn-primary {
@@ -207,6 +229,7 @@ ul {
 /* List Films */
 .list-films {
   position: relative;
+  min-height: 774px;
 }
 
 .film-container {
@@ -269,6 +292,7 @@ ul {
 
 .film-container:hover .back-side {
   display: block;
+  animation: fadeIn .5s ease-in-out;
 }
 
 .film-container .back-side .back-side-container-title {
@@ -333,5 +357,18 @@ ul {
   .film-container .back-side .back-side-title {
     font-size: 12px;
   }
+}
+
+
+/* Show Movies Sidebar */
+.popular-movies,
+.my-movies {
+  display: none;
+}
+
+.popular-movies.active,
+.my-movies.active {
+  display: block;
+  animation: fadeIn .5s ease-in-out;
 }
 
