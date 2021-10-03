@@ -97,7 +97,7 @@ ul {
 
 .hero-content {
   position: relative;
-  margin-top: 300px;
+  margin-bottom: 200px;
 }
 
 .hero-content h1 {
@@ -169,7 +169,8 @@ ul {
   }
 
   .hero-content {
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-bottom: 0;
   }
 
   .hero-content h1 {
@@ -196,9 +197,9 @@ ul {
   }
 }
 
-@media(min-width: 768px) and (max-width: 1023px) {
+@media(min-width: 768px) and (max-width: 1024px) {
   .hero-content {
-    margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
 
@@ -322,5 +323,15 @@ ul {
   letter-spacing: 2px;
 }
 
+@media(min-width: 768px) and (max-width: 1024px) {
+  .film-container .front-side h6 {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 90px;
+  }
 
+  .film-container .back-side .back-side-title {
+    font-size: 12px;
+  }
+}
 

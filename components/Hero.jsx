@@ -17,7 +17,7 @@ const Hero = (props) => {
 
             <Container className="hero-container">
                 <Row>
-                    <Col md={8} lg={9}>
+                    <Col md={8} lg={9} className="align-self-end">
                         <section className="hero-content">
                             <h6 className="wow fadeInDown">ORIGINAL DE <strong>LITEFLIX</strong></h6>
                             <h1 className="hero-content-title wow fadeInUp">{ props.featuredFilm }</h1>
