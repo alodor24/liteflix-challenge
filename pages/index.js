@@ -16,6 +16,7 @@ const Home = (props) => {
             <Hero 
             featuredFilm={ featuredFilm[0].title } 
             urlImage={ featuredFilm[0].backdrop_path }
+            popularFilms={ popularFilms }
             />
         </AppLayout>
     )

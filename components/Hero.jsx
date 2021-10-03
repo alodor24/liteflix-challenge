@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Container, Row, Col, Button } from 'react-bootstrap'
+import Sidebar from './Sidebar'
 
 const Hero = (props) => {
 
@@ -42,7 +43,7 @@ const Hero = (props) => {
 
                     <Col md={4} lg={3}>
                         <section className="list-films">
-
+                            <Sidebar popularFilms={ props.popularFilms } />
                         </section>
                     </Col>
                 </Row>
