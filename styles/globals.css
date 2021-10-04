@@ -113,7 +113,7 @@ ul {
 
 .hero-content h1 {
   font-weight: bold;
-  font-size: 120px;
+  font-size: calc(7em + 1vh);
   line-height: 100px;
   letter-spacing: 16px;
   text-transform: uppercase;
@@ -196,7 +196,7 @@ ul {
   }
 
   .hero-content h1 {
-    font-size: 60px;
+    font-size: calc(3em + 1vh);
     line-height: 66px;
     text-align: center;
     letter-spacing: 12px;
@@ -223,6 +223,46 @@ ul {
   .hero-content {
     margin-bottom: 150px;
   }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .hero-content h1 {
+    font-size: calc(4em + 1vh);
+  }
+}
+
+@media(max-width: 317px) {
+  .hero-content h1 {
+    font-size: calc(2em + 1vh);
+  }
+}
+
+
+/* Dropdown Movies */
+.dropdown-movies,
+.dropdown-movies:hover,
+.dropdown-movies:active,
+.dropdown-movies:focus {
+  width: 100%;
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none !important;
+}
+
+.dropdown-movies .dropdown-title-left,
+.dropdown-movies .dropdown-title-right {
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 4px;
+}
+
+.dropdown-movies .dropdown-title-right {
+  font-weight: bold;
+}
+
+.dropdown-movies .dropdown-menu.show {
+  width: calc(100% + 25px);
+  transform: translate(-25px, 42px) !important;
 }
 
 
