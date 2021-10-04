@@ -239,14 +239,14 @@ ul {
 
 
 /* Dropdown Movies */
-.dropdown-movies,
-.dropdown-movies:hover,
-.dropdown-movies:active,
-.dropdown-movies:focus {
-  width: 100%;
-  background-color: transparent !important;
-  border: none;
-  box-shadow: none !important;
+.dropdown-section {
+  position: relative;
+}
+
+.dropdown-movies {
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 
 .dropdown-movies .dropdown-title-left,
@@ -257,12 +257,81 @@ ul {
 }
 
 .dropdown-movies .dropdown-title-right {
+  padding-right: 10px;
+}
+
+.dropdown-chevron-down {
+  position: absolute;
+  right: 15px;
+}
+
+.dropdown-movies .dropdown-title-right {
   font-weight: bold;
 }
 
-.dropdown-movies .dropdown-menu.show {
-  width: calc(100% + 25px);
-  transform: translate(-25px, 42px) !important;
+.dropdown-section .dropdown-options {
+  background-color: #242424;
+  position: absolute;
+  left: -20px;
+  right: 0;
+  top: 30px;
+  z-index: 999;
+  padding: 10px 20px;
+  color: #fff;
+  display: none;
+}
+
+.dropdown-section .dropdown-options.active {
+  display: block;
+  animation: fadeIn .3s ease-in-out;
+}
+
+.dropdown-section .dropdown-options::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #242424;
+  transform: rotate(45deg);
+  top: -5px;
+  right: 15px;
+}
+
+.dropdown-section .dropdown-options li {
+  font-size: 16px;
+  line-height: 2.1em;
+  letter-spacing: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-section .dropdown-options li.active {
+  font-weight: bold;
+}
+
+.dropdown-section .dropdown-options li.active::after {
+  content: '';
+  background-image: url('../public/assets/images/Vector_14.svg');
+  background-size: cover;
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+@media(max-width: 767px) {
+  .dropdown-section .dropdown-options {
+    left: 0;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1200px) {
+  .dropdown-movies .dropdown-title-left,
+  .dropdown-movies .dropdown-title-right {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 
