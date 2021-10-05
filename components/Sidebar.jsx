@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container, Row, Dropdown } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import PopularFilms from './PopularFilms'
 import MyMovies from './MyMovies'
 
@@ -81,9 +81,15 @@ const Sidebar = (props) => {
                 <PopularFilms popularFilms={ props.popularFilms } />
             </div>
 
-            <div className={ 'my-movies ' + (showMyMovies ? 'active' : '') }>
-                <MyMovies />
-            </div>
+            {(() => {
+                if (showMyMovies) {
+                    return (
+                        <div className={ 'my-movies ' + (showMyMovies ? 'active' : '') }>
+                            <MyMovies />
+                        </div>
+                    )
+                }
+            }) ()}
         </Container>
     )
 }

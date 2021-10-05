@@ -36,6 +36,7 @@ ul {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 4px;
+  outline: none !important;
 }
 
 .navbar .ml-auto.navbar-nav {
@@ -481,3 +482,136 @@ ul {
   animation: fadeIn .5s ease-in-out;
 }
 
+
+/* Modal */
+.modal-open {
+  padding-right: 0 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  background: rgba(36, 36, 36, 0.8);
+}
+
+.modal-content {
+  border-radius: 0;
+  background-color: #242424;
+  border: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-title {
+  color: #64EEBC;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.modal-header .btn-close {
+  color: #fff;
+  background: transparent url('../public/assets/images/cerrar.svg') center/1em auto no-repeat;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.modal-body .input-title {
+  width: 210px;
+  margin: 0 auto !important;
+}
+
+.modal-body .input-title input {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #242424;
+  border-bottom: solid 1px #fff !important;
+}
+
+::placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+::-moz-placeholder {
+  color: #fff !important;
+}
+
+.modal-body .container-drag-drop {
+  position: relative;
+  border: dashed #fff 2px;
+  width: 85%;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body .container-drag-drop.active,
+.modal-body .container-drag-drop.active:hover {
+  border: solid #64EEBC 2px;
+  transition: all .3s ease-in-out;
+}
+
+.modal-body .container-drag-drop h6 {
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.modal-body .container-drag-drop .text-add-file {
+  font-weight: bold;
+}
+
+.modal-body .container-drag-drop .drop-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 !important;
+  opacity: 0 !important;
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
+}
+
+.modal-footer .btn {
+  background-color: #fff;
+  opacity: .5;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  color: #242424;
+  padding: 16px 35px;
+  margin-bottom: 20px;
+}
