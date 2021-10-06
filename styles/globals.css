@@ -115,7 +115,7 @@ ul {
 .hero-content h1 {
   font-weight: bold;
   font-size: calc(7em + 1vh);
-  line-height: 100px;
+  line-height: 1em;
   letter-spacing: 16px;
   text-transform: uppercase;
   color: #64EEBC;
@@ -198,7 +198,6 @@ ul {
 
   .hero-content h1 {
     font-size: calc(3em + 1vh);
-    line-height: 66px;
     text-align: center;
     letter-spacing: 12px;
   }
