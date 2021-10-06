@@ -5,6 +5,7 @@ const AddMyMovie = () => {
 
     const [dragArea, setDragArea] = useState(false)
     const [loadImageDrop, setLoadImageDrop] = useState(false)
+    const [disabledButton, setDisabledButton] = useState(true)
 
     const [imageMovie, setImageMovie] = useState('')
     const [titleMovie, setTitleMovie] = useState('')
@@ -27,6 +28,7 @@ const AddMyMovie = () => {
                     setDragArea(true)
                     setLoadImageDrop(true)
                     setImageMovie(event.target.result)
+                    validateInputs()
                 }
 
             } else {
@@ -49,14 +51,42 @@ const AddMyMovie = () => {
         setTitleMovie(event.target.value)
     }
 
-    const loadDataLocalStorage = () => {
-        const data = {
-            image: imageMovie,
-            title: titleMovie,
+    const validateInputs = () => {
+        if (imageMovie != '' && titleMovie != '') {
+            setDisabledButton(false)
+        } else {
+            setDisabledButton(true)
         }
-
-        localStorage.setItem('dataMovie', JSON.stringify(data))
     }
+
+    const loadDataLocalStorage = () => {
+
+        if (localStorage.getItem('dataMovie') !== null) {
+
+            const getData = localStorage.getItem('dataMovie')
+            const dataMovieLocalStorage = JSON.parse(getData)
+            
+            const dataMovie = {
+                image: imageMovie,
+                title: titleMovie,
+            }
+
+            localStorage.setItem('dataMovie', JSON.stringify([...dataMovieLocalStorage, dataMovie]))
+
+        } else {
+
+            const dataMovie = {
+                image: imageMovie,
+                title: titleMovie,
+            }
+
+            localStorage.setItem('dataMovie', JSON.stringify([dataMovie]))
+        }
+    }
+
+    useEffect(() => {
+        validateInputs()
+    }, [titleMovie, imageMovie])
 
     return (
         <>
@@ -110,7 +140,8 @@ const AddMyMovie = () => {
             </Modal.Body>
 
             <Modal.Footer>
-                <Button onClick={ loadDataLocalStorage }>
+                <Button disabled={ disabledButton }
+                onClick={ loadDataLocalStorage }>
                     SUBIR PELÍCULA
                 </Button>
             </Modal.Footer>

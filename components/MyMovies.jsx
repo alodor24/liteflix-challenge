@@ -13,8 +13,7 @@ const MyMovies = () => {
             const getData = localStorage.getItem('dataMovie')
             const dataMovieLocalStorage = JSON.parse(getData)
 
-            setDataLocalStorage([dataMovieLocalStorage])
-            //console.log(dataLocalStorage)
+            setDataLocalStorage(dataMovieLocalStorage)
         }
         setShowData(true)
 
@@ -33,6 +32,7 @@ const MyMovies = () => {
                                     src={ movie.image }
                                     alt={ movie.title }
                                     layout='fill'
+                                    loading='lazy'
                                     />
 
                                     <div className="front-side">
