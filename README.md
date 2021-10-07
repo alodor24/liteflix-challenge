@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 See the project [liteflix-challenge.vercel.app](https://liteflix-challenge.vercel.app/)
 
-![liteflix](https://github.com/alodor24/liteflix-challenge/blob/main/public/assets/images/app-liteflix.jpg){width='500px'}
+![liteflix](https://github.com/alodor24/liteflix-challenge/blob/main/public/assets/images/app-liteflix.jpg)
 
 ## Getting Started
 
